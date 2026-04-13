@@ -1,0 +1,17 @@
+/// Remote imagery from Stitch HTML exports (PlayScout auth).
+abstract final class StitchAuthAssets {
+  static const welcomePlaygroundHero =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuBM6ZuXU2hzadmEL4CZY3mtKiTxvvHJYF71_ItwXo2-X0QqwRsCpp9isO-M-Gd-mxytgV-zkRtBAgMZZ7XLBCOWyPfU9BxdnZ2tHA1Xjnq4KqYFgLZqoqtRTs4fKNqnLVtqmHYY93qyTbG8QqH2uJ-RUjMjbIVE3tR-6ySWnzQMJOviOXV4nbRl5K0fYsbtJZdabMwd6I0yX4LQ1VyC2O6pYBMoLuxudGYQsAmU-QhhfJidWphuUPk8S79IziQMQK4CsbPBCZZwzcEQ';
+
+  static const welcomeLeafDecoration =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuCZfgqfnrELqAUEni1Fc_adaocK9XQGr_QcVNVY1qAiJ_API5JVVJDDWIq3MCKRhp7p58rS-0DIXsgJ5CPyfejvPvvenswCcm3nFoir9tODAOzWEA5j12Wx7Yx0uCRneI-4J5mG4izYQ4G3o2vtcil8yu7t3ki9SGOw0FGTpomnrzICxpXFohLQ0_L3elD5ymFMw8lYPYKDAp9SnABiw_HFGLdR9nE0KjXn2Z-G1P4k6XtGx8r-ZsgvhqfJo8ILMrd0ztBw0z_dbw-S';
+
+  static const forgotTreeIllustration =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuAudZtAueRiwHqIrgo3NHofKk9DqEqShH05bc2Hg2X4LRG06HTRe4bPYlm0uovYmP-SL4EqQLn4B710zBiqXWwkXWeBG_iwv_AzSwod2TSDKL-Yd5WTuiDYYEIo6MI5sM8FxTjlFFA0m92SG1l_Qr77I4ceGdkGlIumIs55KqJbwD7QJP_GnwtKhPLLGQ91iSvbTgFTmUXowOHnOQJvok-4VRBwsmQcmk4rC3s2E-RdHEQ7saDit0-dG26LwjsJgKveRpYdtlT_HyHV';
+
+  static const forgotSkyIllustration =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuD-jUvi6Jrdrt-oekqIQyMuVuhw7GLYbTenwGVsLDOorJ-_jgIU2-LHLkvRibOoST2uueMLBBSjx3EfBpFyfRbf1n6LokOiHymLvwQBahMBPmx1uxFZyI8CHZLG4-UTjl3oq_8TFnEsVFeDJxhhrY-EceOxCwX6H31_h-JgAZ8vODZBpQ6VurrymZ89jMsKrEDMJ5mHu3KL0ZXoa-vozy65Go-f6l2uEzIEmFD67St2HTlzTssBY64BynczzNEPaBxY8-cLfW0tw1Zg';
+
+  static const guestKiteIllustration =
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDhQMkhKPDKGYdkVrb4OHXullFflLswqdztO0_wNB7jCDpR_XatzC4vNWNoEV1QCmc5UoqMTFVfuY2PUiBtlo13vpfJC9bcsQ6KpyOGhrPsoinGRCNBrZNGEy-rcpCE24Yo793gLZLGt3YVcdo4MKoHyse0jPJfjO5jzpoyjlkExjP3R_IWscvWL0Xbx3B27eKDKRz8cPB6aTVpb0Cv_hM8NdMVWG0PTtfixSRNO3BYkiDwC_uT9Aj3TQz77TYvKL9-WVzTRBm49Ksl';
+}

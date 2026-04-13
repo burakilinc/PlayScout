@@ -1,0 +1,479 @@
+{
+  "@@locale": "en",
+  "appTitle": "PlayScout",
+  "navDiscover": "Discover",
+  "navMap": "Map",
+  "navEvents": "Events",
+  "navFavorites": "Favorites",
+  "languageTitle": "Language",
+  "languageSubtitle": "Change app language without signing in",
+  "useDeviceLanguage": "Use device language",
+  "notificationsTooltip": "Notifications",
+  "welcomeTermsPrivacySoon": "Terms and privacy links coming soon.",
+  "welcomeTagline": "Find the perfect place for your child",
+  "continueWithGoogle": "Continue with Google",
+  "continueWithApple": "Continue with Apple",
+  "continueWithEmail": "Continue with Email",
+  "continueAsGuest": "CONTINUE AS GUEST",
+  "legalPrefix": "By continuing, you agree to PlayScout's ",
+  "legalTerms": "Terms of Service",
+  "legalAnd": " & ",
+  "legalPrivacy": "Privacy Policy",
+  "greetingMorning": "Good morning",
+  "greetingAfternoon": "Good afternoon",
+  "greetingEvening": "Good evening",
+  "whereToToday": "Where to today?",
+  "locationPickerSoon": "Location picker coming soon",
+  "notificationsSoon": "Notifications coming soon",
+  "suggestPlaceCta": "Suggest a place",
+  "mapTitle": "The Sanctuary",
+  "mapEmptyTitle": "No places nearby",
+  "mapEmptySubtitle": "Try widening filters or moving the map area.",
+  "retry": "Retry",
+  "nearbyPlaces": "Nearby places",
+  "noVenuesToShow": "No venues to show.",
+  "authWelcomeBack": "Welcome Back",
+  "authStepBack": "Step back into your child's world of discovery.",
+  "emailAddress": "Email Address",
+  "password": "Password",
+  "forgotPassword": "Forgot password?",
+  "loginToPlayScout": "Login to PlayScout",
+  "googleShort": "Google",
+  "appleShort": "Apple",
+  "newToPlayScout": "New to PlayScout?",
+  "joinUs": "Join Us",
+  "orContinueWith": "OR CONTINUE WITH",
+  "outdoorDiscovery": "OUTDOOR DISCOVERY",
+  "joinPlayScout": "Join PlayScout",
+  "createAccountLead": "Create an account to start exploring nature-friendly playgrounds and activities for your little explorers.",
+  "fullName": "Full Name",
+  "confirmPassword": "Confirm Password",
+  "createMyAccount": "Create My Account",
+  "alreadyHaveAccount": "Already have an account?",
+  "logIn": "Log In",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "cookies": "Cookies",
+  "copyrightLine": "© 2026 PlayScout. All Rights Reserved.",
+  "termsLinkSoon": "Terms link coming soon.",
+  "privacyLinkSoon": "Privacy link coming soon.",
+  "acceptTermsRequired": "Please accept the Terms of Service and Privacy Policy to continue.",
+  "passwordsDoNotMatch": "Passwords do not match.",
+  "passwordRulesError": "Use 8-128 characters with at least one uppercase letter, one lowercase letter, and one number.",
+  "iAgreeToThe": "I agree to the ",
+  "andText": " and ",
+  "dotText": ".",
+  "forgotTitle": "Lost your path?",
+  "forgotLead": "Enter the email associated with your PlayScout account and we'll send a breeze of fresh air to reset your password.",
+  "parentEmail": "PARENT'S EMAIL",
+  "resetPassword": "Reset Password",
+  "rememberedIt": "Remembered it?",
+  "goBackToLogin": "Go back to login",
+  "forgotResetInfo": "Check your inbox and spam folder. The reset link is active for 24 hours to ensure your sanctuary remains secure.",
+  "guestPromptMaybeLater": "Maybe later",
+  "guestTitleFavorites": "Sign in to save favorites",
+  "guestBodyFavorites": "Create a PlayScout account to save playgrounds you love and pick them up on any device.",
+  "guestTitleWriteReview": "Sign in to write a review",
+  "guestBodyWriteReview": "Share what worked for your family - reviews help other parents choose the right spot with confidence.",
+  "guestTitleSuggestPlace": "Sign in to suggest a place",
+  "guestBodySuggestPlace": "Members can suggest new spots for our map. Each suggestion is reviewed before it goes live.",
+  "guestTitleOpenFavorites": "Sign in to open Favorites",
+  "guestBodyOpenFavorites": "Your saved places and lists are available when you sign in with a full account.",
+  "guestTitleContinue": "Sign in to continue",
+  "guestBodyContinuePath": "That area of PlayScout is for members. Sign in to pick up where you left off.",
+  "guestBodyDefault": "Join the PlayScout community to save favorites, write reviews, and help other families discover great places.",
+  "suggestPlaceTitle": "Suggest a place",
+  "suggestKnowGreatSpot": "Know a great spot?",
+  "suggestEntryLead": "Tell us about playgrounds, cafes, or play spaces other families would love. Suggestions are reviewed before they appear anywhere in PlayScout.",
+  "startSuggestion": "Start suggestion",
+  "fullMemberRequired": "Full member account required.",
+  "continueText": "Continue",
+  "signInFullAccountSuggest": "Sign in with a full account to suggest a new place.",
+  "placeName": "Place name",
+  "category": "Category",
+  "location": "Location",
+  "locationHelp": "Either paste coordinates (both required) or describe the location (5+ characters).",
+  "latitude": "Latitude",
+  "longitude": "Longitude",
+  "locationLabelHint": "Location label (area, address hint, landmark)",
+  "whyFamiliesLoveItOptional": "Why families love it (optional)",
+  "ageRangeMonthsOptional": "Age range (months, optional)",
+  "minMonths": "Min months",
+  "maxMonths": "Max months",
+  "playSupervisorOnSite": "Play supervisor on site",
+  "allowsSupervisedDropoff": "Allows supervised drop-off",
+  "optionalAmenities": "Optional amenities",
+  "playSupervisorShort": "Play supervisor",
+  "dropoffAllowed": "Drop-off allowed",
+  "submitForReview": "Submit for review",
+  "suggestModerationNote": "Your suggestion is queued for moderation and is not published to the map until approved.",
+  "suggestThanksTitle": "Thanks for your suggestion",
+  "suggestThanksBody": "Our team will review your submission before it can appear in PlayScout.",
+  "moderation": "Moderation",
+  "statusLabel": "Status",
+  "notVisibleUntilReview": "\"{name}\" is not visible on venue lists until it passes review.",
+  "@notVisibleUntilReview": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "backToDiscover": "Back to Discover",
+  "suggestion": "Suggestion",
+  "suggestionReceived": "Thanks - your suggestion was received.",
+  "home": "Home",
+  "favorites": "Favorites",
+  "favoritesOptimisticVenueName": "Saved venue",
+  "signIn": "Sign in",
+  "savePlacesFamilyLoves": "Save the places your family loves",
+  "favoritesGuestLead": "Create a free account or sign in to keep a gentle list of playgrounds and events.",
+  "browseAccountOptions": "Browse account options",
+  "tapHeartToSave": "Tap the heart on a playground to save it here.",
+  "couldNotRemoveFavorite": "Could not remove favorite.",
+  "removeFromFavorites": "Remove from favorites",
+  "writeReview": "Write a review",
+  "postReview": "Post review",
+  "skip": "Skip",
+  "details": "Details",
+  "refresh": "Refresh",
+  "search": "Search",
+  "cancel": "Cancel",
+  "resetFilters": "Reset Filters",
+  "listView": "List view",
+  "indoor": "Indoor",
+  "outdoor": "Outdoor",
+  "nearby": "Nearby",
+  "free": "Free",
+  "thisWeekend": "This Weekend",
+  "retryCaps": "Retry",
+  "toilet": "Toilet",
+  "parking": "Parking",
+  "foodAndDrinks": "Food & Drinks",
+  "shade": "Shade",
+  "stroller": "Stroller",
+  "toddlerSafe": "Toddler Safe",
+  "parks": "Parks",
+  "cafes": "Cafes",
+  "reviewPostedThanks": "Thanks - your review was posted.",
+  "cleanliness": "Cleanliness",
+  "safety": "Safety",
+  "goodForSmallChildren": "Good for small children",
+  "indoorPlay": "Indoor play",
+  "outdoorPlay": "Outdoor play",
+  "mixedIndoorOutdoor": "Mixed indoor / outdoor",
+  "dropInCare": "Drop-in care",
+  "familyCafeRestaurant": "Family cafe or restaurant",
+  "other": "Other",
+  "fenced": "Fenced",
+  "sand": "Sand",
+  "strollerFriendly": "Stroller-friendly",
+  "restrooms": "Restrooms",
+  "foodNearby": "Food nearby",
+  "playSupervisorAvailable": "Play Supervisor Available",
+  "trainedStaffWatchingZones": "Trained staff watching the zones",
+  "childDropoffAllowed": "Child Drop-off Allowed",
+  "safeShortTermCareToddlers": "Safe short-term care for toddlers",
+  "designatedSecureZones": "Designated secure zones where you can leave your child for up to 2 hours.",
+  "artWorkshops": "Art Workshops",
+  "codingForKids": "Coding for Kids",
+  "musicTheory": "Music Theory",
+  "scienceLab": "Science Lab",
+  "age0to5": "Age 0-5",
+  "age6to10": "Age 6-10",
+  "strollerParking": "Stroller Parking",
+  "cafe": "Cafe",
+  "deviceLanguageLabel": "Device",
+  "dashEmDash": "—",
+  "filterTrustSafetyTitle": "Trust & Safety",
+  "filterTrustSupervisorLongSubtitle": "Certified staff on-site to monitor children during play hours.",
+  "filterAmenitiesTitle": "Amenities",
+  "filterEnvironmentTitle": "Environment",
+  "filterHeaderTitle": "Filter Playgrounds",
+  "filterReset": "Reset",
+  "filterShowPlaces": "Show Places",
+  "filterDistanceTitle": "Distance",
+  "filterDistanceHalfKm": "0.5 km",
+  "filterDistanceTenKm": "10 km",
+  "filterAgeSuitabilityTitle": "Age Suitability",
+  "filterAge02": "0-2",
+  "filterAge35": "3-5",
+  "filterAge610": "6-10",
+  "homeWeekendHeading": "This Weekend",
+  "homeNearYouHeading": "Near You",
+  "homeSearchHint": "Search places",
+  "homeCtaTitle": "Where should we go now?",
+  "homeCtaSubtitle": "Get personalized recommendations for parks, cafes, and indoor play areas based on your mood.",
+  "homeCtaButton": "Get recommendations",
+  "homeWeekendEmpty": "No events scheduled this weekend.",
+  "homeEmptyTitle": "No venues nearby",
+  "homeEmptySubtitle": "Try another category or widen your search later.",
+  "homeErrorTitle": "Something went wrong",
+  "homeShowAllCategories": "Show all categories",
+  "homeCategoryParks": "Parks",
+  "homeCategoryIndoor": "Indoor",
+  "homeCategoryEvents": "Events",
+  "homeCategoryCafes": "Cafes",
+  "homeCategorySoftPlay": "Soft Play",
+  "reviewTranslatedFrom": "Translated from {language}",
+  "reviewSeeOriginal": "See original",
+  "reviewShowTranslation": "Show translation",
+  "venueParentReviews": "Parent Reviews",
+  "venueViewAll": "View all",
+  "venueNoReviewsYet": "No reviews yet.",
+  "venueBeFirstToShare": "Be the first to share your experience.",
+  "venueNotFound": "Venue not found",
+  "errorSomethingWrong": "Something went wrong",
+  "couldNotUpdateFavorite": "Could not update favorite. Try again.",
+  "shareComingSoon": "Share coming soon",
+  "venueWhatOffers": "What this place offers",
+  "getDirections": "Get Directions",
+  "mapSearchParksIndoorHint": "Search parks, indoor places...",
+  "mapKmAway": "{distance} km away",
+  "eventsWeekendFun": "Weekend Fun",
+  "eventsSeeAll": "See all",
+  "eventsNoWeekendPicks": "No weekend picks in this list.",
+  "eventsLearningSkills": "Learning & Skills",
+  "eventsSomethingWrong": "Something went wrong",
+  "eventsNoEventsWeekend": "No events this weekend.",
+  "eventsNoEventsFilters": "No events match your filters right now.",
+  "eventsNoEventsMatchFilters": "No events match these filters.",
+  "eventsHappeningNearby": "Happening Nearby",
+  "eventsNoVenueLinked": "No venue-linked events yet.",
+  "eventsFeaturedBadge": "FEATURED",
+  "eventsGenericTitle": "Event",
+  "searchFindParkTitle": "Find a Park",
+  "searchSomethingWrong": "Something went wrong",
+  "searchNoVenuesMatch": "No venues match this search right now.\nTry another name, adjust the chips, or open filters to widen your criteria.",
+  "searchPopularSearches": "Popular searches",
+  "searchSuggestedForYou": "Suggested for you",
+  "searchRecentSearches": "Recent searches",
+  "searchClearHistory": "Clear",
+  "searchNoRecentYet": "No recent searches yet.",
+  "searchHintPanel": "Try a place name or pick a category. Filters you set here stay in sync with Home and Map.",
+  "searchNoResultsTitle": "No results found",
+  "searchNoResultsBody": "Try clearing quick filters or widening your saved filters from the tune menu.",
+  "popularPlayground": "Playground",
+  "popularParkWithCafe": "Park with cafe",
+  "popularSoftPlay": "Soft play",
+  "popularWaterPlay": "Water play",
+  "authErrorInvalidCredentials": "That email or password does not match our records. Please try again.",
+  "authErrorGoogleNotConfigured": "Google sign-in is not available on this server yet.",
+  "authErrorEmailLinkedGoogle": "This email is linked to a different Google account.",
+  "authErrorAppleComingSoon": "Apple Sign In is coming soon.",
+  "authErrorGeneric": "Something went wrong. Please try again.",
+  "authErrorGoogleWebUnconfigured": "Google sign-in on web needs GOOGLE_WEB_CLIENT_ID at build time. Use email or guest for local dev.",
+  "authErrorGoogleIdToken": "Could not read your Google account. Please try again.",
+  "authErrorAppleIdentity": "Could not read your Apple ID. Please try again.",
+  "authErrorAppleUnavailable": "Apple Sign In is not available on this device.",
+  "writeReviewOverallRating": "Overall rating",
+  "writeReviewYourReview": "Your review",
+  "writeReviewWrittenInAppLang": "Written in {code} — matches your app language when supported.",
+  "writeReviewOptionalScores": "Optional detail scores (1–5)",
+  "writeReviewPickRating": "Pick a star rating from 1 to 5.",
+  "writeReviewCommentMinLen": "Please write at least 20 characters.",
+  "writeReviewCommentMaxLen": "Comment is too long (max 4000 characters).",
+  "writeReviewCommentMinWords": "Please use at least three words.",
+  "writeReviewCommentRepeated": "Comment cannot be a single repeated character.",
+  "writeReviewAlreadyExists": "You already shared a review for this place. Thanks for helping other parents!",
+  "writeReviewCouldNotPost": "Could not post your review. Check your connection and try again.",
+  "signInToPostReview": "Sign in with a full account to post a review.",
+  "suggestCouldNotSend": "Could not send your suggestion. Try again in a moment.",
+  "suggestNameMin": "Name must be at least 2 characters.",
+  "suggestNameAlphanumeric": "Name must include letters or digits.",
+  "suggestLocationNumbersInvalid": "Enter valid numbers for both latitude and longitude, or clear both.",
+  "suggestLocationOutOfRange": "Coordinates are out of range.",
+  "suggestLocationEitherOr": "Add both latitude & longitude, or a location label (at least 5 characters).",
+  "suggestDetailsMinLen": "If you add details, use at least 10 characters.",
+  "suggestMinAgeRange": "Min age (months): use 0–216.",
+  "suggestMaxAgeRange": "Max age (months): use 0–216.",
+  "suggestMinGreaterMax": "Min age cannot be greater than max age.",
+  "suggestSupervisorAmenityRequires": "Play supervisor amenity requires \"Play supervisor on site\".",
+  "suggestDropoffAmenityRequires": "Drop-off amenity requires \"Allows supervised drop-off\".",
+  "suggestValidationGeneric": "Please check the form and try again.",
+  "venueReviewsNotFound": "This venue could not be found.",
+  "venueReviewsUnsupportedLang": "This language is not supported for reviews.",
+  "venueReviewsLoadFailed": "Could not load reviews. Pull to try again.",
+  "venueReviewsNoReviews": "No reviews yet.",
+  "venueReviewsBeFirst": "Be the first to share your experience.",
+  "venueReviewsParentTitle": "Parent reviews",
+  "formatDistanceMeters": "{meters} m",
+  "formatDistanceKm": "{km} km",
+  "ageAllAges": "All ages",
+  "ageYearsSingle": "{years} yrs",
+  "ageYearsRange": "{low}–{high} yrs",
+  "ratingNoRatingYet": "No rating yet",
+  "ratingWithCount": "{rating} · {count} reviews",
+  "eventTodayTime": "Today, {time}",
+  "eventAgesRangeLabel": "Ages {low}–{high}",
+  "eventAgesMinPlusLabel": "Ages {years}+",
+  "eventAgesUpToOnly": "Up to {years}",
+  "venueMilesAway": "{miles} miles away",
+  "venueDetailScreenTitle": "Venue Details",
+  "venueAmenitiesSectionTitle": "What this place offers",
+  "venueGetDirectionsCta": "Get Directions",
+  "venueOpenInMaps": "Open in Maps",
+  "venueReviewCount": "{count, plural, =0{No reviews} one{1 review} other{{count} reviews}}",
+  "shareVenueBody": "{name}\n{url}",
+  "favoriteCouldNotUpdate": "Could not update favorite. Try again.",
+  "accountScreenTitle": "Account",
+  "accountMemberSignedIn": "You are signed in with a full member account.",
+  "accountGuestSignedIn": "You are browsing as a guest. Sign in with a full account to save favorites on every device.",
+  "accountSignedOutBlurb": "Sign in to save favorites, write reviews, and sync across devices.",
+  "accountSignOut": "Sign out",
+  "navSignInEntry": "Sign in",
+  "navMyAccountEntry": "My account",
+  "navMyProfileEntry": "My profile",
+  "venueAgeChipRange": "Ages {low}–{high}",
+  "ageMonthsShort": "{months} mo",
+  "ageYearsPlusShort": "{years}+",
+  "ageUpToWithLabel": "Up to {label}",
+  "@reviewTranslatedFrom": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "@mapKmAway": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "@writeReviewWrittenInAppLang": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "@formatDistanceMeters": {
+    "placeholders": {
+      "meters": {
+        "type": "String"
+      }
+    }
+  },
+  "@formatDistanceKm": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "@ageYearsSingle": {
+    "placeholders": {
+      "years": {
+        "type": "String"
+      }
+    }
+  },
+  "@ageYearsRange": {
+    "placeholders": {
+      "low": {
+        "type": "String"
+      },
+      "high": {
+        "type": "String"
+      }
+    }
+  },
+  "@ratingWithCount": {
+    "placeholders": {
+      "rating": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventTodayTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventAgesRangeLabel": {
+    "placeholders": {
+      "low": {
+        "type": "String"
+      },
+      "high": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventAgesMinPlusLabel": {
+    "placeholders": {
+      "years": {
+        "type": "String"
+      }
+    }
+  },
+  "@eventAgesUpToOnly": {
+    "placeholders": {
+      "years": {
+        "type": "String"
+      }
+    }
+  },
+  "@venueMilesAway": {
+    "placeholders": {
+      "miles": {
+        "type": "String"
+      }
+    }
+  },
+  "@venueAgeChipRange": {
+    "placeholders": {
+      "low": {
+        "type": "String"
+      },
+      "high": {
+        "type": "String"
+      }
+    }
+  },
+  "@ageMonthsShort": {
+    "placeholders": {
+      "months": {
+        "type": "String"
+      }
+    }
+  },
+  "@ageYearsPlusShort": {
+    "placeholders": {
+      "years": {
+        "type": "String"
+      }
+    }
+  },
+  "@ageUpToWithLabel": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "@venueReviewCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@shareVenueBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  }
+}
