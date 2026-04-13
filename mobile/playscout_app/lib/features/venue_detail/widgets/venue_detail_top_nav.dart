@@ -13,6 +13,7 @@ class VenueDetailTopNav extends StatelessWidget {
     required this.onFavoriteTap,
     required this.onShareTap,
     required this.favoriteSelected,
+    this.favoriteBusy = false,
   });
 
   final String title;
@@ -20,6 +21,7 @@ class VenueDetailTopNav extends StatelessWidget {
   final VoidCallback onFavoriteTap;
   final VoidCallback onShareTap;
   final bool favoriteSelected;
+  final bool favoriteBusy;
 
   @override
   Widget build(BuildContext context) {
@@ -57,11 +59,23 @@ class VenueDetailTopNav extends StatelessWidget {
                       ),
                     ),
                   ),
-                  _CircleIconButton(
-                    onPressed: onFavoriteTap,
-                    icon: favoriteSelected ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-                    iconColor: favoriteSelected ? PsColors.error : PsColors.primary,
-                  ),
+                  favoriteBusy
+                      ? const SizedBox(
+                          width: 40,
+                          height: 40,
+                          child: Center(
+                            child: SizedBox(
+                              width: 22,
+                              height: 22,
+                              child: CircularProgressIndicator(strokeWidth: 2, color: PsColors.primary),
+                            ),
+                          ),
+                        )
+                      : _CircleIconButton(
+                          onPressed: onFavoriteTap,
+                          icon: favoriteSelected ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+                          iconColor: favoriteSelected ? PsColors.error : PsColors.primary,
+                        ),
                   const SizedBox(width: PsSpacing.sm),
                   _CircleIconButton(
                     onPressed: onShareTap,

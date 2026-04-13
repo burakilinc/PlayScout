@@ -7,7 +7,7 @@ import 'package:playscout_app/app/router.dart';
 import 'package:playscout_app/features/auth/auth_session.dart';
 import 'package:playscout_app/features/auth/data/auth_aware_http_client.dart';
 import 'package:playscout_app/features/favorites/data/favorites_repository.dart';
-import 'package:playscout_app/features/favorites/favorites_catalog.dart';
+import 'package:playscout_app/features/favorites/favorites_store.dart';
 import 'package:playscout_app/features/home_discover/data/venues_nearby_repository.dart';
 import 'package:playscout_app/features/suggestions/data/suggestions_repository.dart';
 import 'package:playscout_app/features/venue_detail/data/reviews_write_repository.dart';
@@ -26,7 +26,7 @@ void main() {
     final favoritesRepo = FavoritesRepository(httpClient: authHttp, apiBaseUrl: base);
     final localeController = LocaleController(prefs);
     await localeController.restore();
-    final favoritesCatalog = FavoritesCatalog(
+    final favoritesStore = FavoritesStore(
       authSession: authSession,
       repository: favoritesRepo,
       localeController: localeController,
@@ -37,7 +37,7 @@ void main() {
     await tester.pumpWidget(PlayScoutApp(
       router: router,
       authSession: authSession,
-      favoritesCatalog: favoritesCatalog,
+      favoritesStore: favoritesStore,
       reviewsWriteRepository: reviewsWriteRepo,
       suggestionsRepository: suggestionsRepo,
       localeController: localeController,

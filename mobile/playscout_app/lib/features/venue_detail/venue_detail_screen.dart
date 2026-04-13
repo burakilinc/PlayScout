@@ -207,6 +207,7 @@ class _VenueDetailScreenState extends State<VenueDetailScreen> with RouteAware {
                           title: l10n.venueDetailScreenTitle,
                           onBack: () => _popOrHome(context),
                           favoriteSelected: catalog.isFavorite(venue.id),
+                          favoriteBusy: catalog.isLoading(venue.id),
                           onFavoriteTap: () async {
                             try {
                               await playScoutFavoriteTap(

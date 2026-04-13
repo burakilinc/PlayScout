@@ -119,7 +119,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
         builder: (context, _) {
           final catalog = FavoritesScope.of(context);
           final items = catalog.items;
-          if (catalog.isLoading && items.isEmpty) {
+          if (catalog.isRefreshing && items.isEmpty) {
             return const Center(
               child: SizedBox(
                 width: 36,
@@ -173,10 +173,11 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               separatorBuilder: (context, _) => const SizedBox(height: PsSpacing.md),
               itemBuilder: (context, i) => _FavoriteVenueTile(
                 item: items[i],
+                removeInProgress: catalog.isLoading(items[i].venueId),
                 onOpen: () => context.push('${PsRoutes.venue}/${items[i].venueId}'),
                 onRemove: () async {
                   try {
-                    await catalog.removeFavorite(items[i].venueId);
+                    await catalog.toggleFavorite(venueId: items[i].venueId);
                   } catch (_) {
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -197,11 +198,13 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 class _FavoriteVenueTile extends StatelessWidget {
   const _FavoriteVenueTile({
     required this.item,
+    required this.removeInProgress,
     required this.onOpen,
     required this.onRemove,
   });
 
   final FavoriteListItem item;
+  final bool removeInProgress;
   final VoidCallback onOpen;
   final Future<void> Function() onRemove;
 
@@ -273,11 +276,20 @@ class _FavoriteVenueTile extends StatelessWidget {
                   ],
                 ),
               ),
-              IconButton(
-                tooltip: l10n.removeFromFavorites,
-                onPressed: () => onRemove(),
-                icon: const Icon(Icons.favorite_rounded, color: PsColors.error),
-              ),
+              removeInProgress
+                  ? const Padding(
+                      padding: EdgeInsets.all(PsSpacing.sm),
+                      child: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: CircularProgressIndicator(strokeWidth: 2, color: PsColors.error),
+                      ),
+                    )
+                  : IconButton(
+                      tooltip: l10n.removeFromFavorites,
+                      onPressed: () => onRemove(),
+                      icon: const Icon(Icons.favorite_rounded, color: PsColors.error),
+                    ),
             ],
           ),
         ),

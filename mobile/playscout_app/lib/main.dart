@@ -8,7 +8,7 @@ import 'app/router.dart';
 import 'features/auth/auth_session.dart';
 import 'features/auth/data/auth_aware_http_client.dart';
 import 'features/favorites/data/favorites_repository.dart';
-import 'features/favorites/favorites_catalog.dart';
+import 'features/favorites/favorites_store.dart';
 import 'features/home_discover/data/venues_nearby_repository.dart';
 import 'features/suggestions/data/suggestions_repository.dart';
 import 'features/venue_detail/data/reviews_write_repository.dart';
@@ -24,7 +24,7 @@ Future<void> main() async {
   final inner = http.Client();
   final authHttp = AuthAwareHttpClient(authSession, inner);
   final favoritesRepo = FavoritesRepository(httpClient: authHttp, apiBaseUrl: base);
-  final favoritesCatalog = FavoritesCatalog(
+  final favoritesStore = FavoritesStore(
     authSession: authSession,
     repository: favoritesRepo,
     localeController: localeController,
@@ -35,7 +35,7 @@ Future<void> main() async {
   runApp(PlayScoutApp(
     router: router,
     authSession: authSession,
-    favoritesCatalog: favoritesCatalog,
+    favoritesStore: favoritesStore,
     reviewsWriteRepository: reviewsWriteRepo,
     suggestionsRepository: suggestionsRepo,
     localeController: localeController,

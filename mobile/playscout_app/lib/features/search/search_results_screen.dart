@@ -282,6 +282,7 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
             return SearchResultVenueCard(
               venue: v,
               isFavorite: catalog.isFavorite(v.id),
+              favoriteInProgress: catalog.isLoading(v.id),
               onFavoriteTap: () async {
                 try {
                   await playScoutFavoriteTap(

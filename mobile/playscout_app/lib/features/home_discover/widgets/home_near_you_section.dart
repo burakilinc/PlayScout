@@ -51,6 +51,7 @@ class HomeNearYouSection extends StatelessWidget {
                       HomeNearYouVenueCard(
                         venue: v,
                         isFavorite: catalog.isFavorite(v.id),
+                        favoriteInProgress: catalog.isLoading(v.id),
                         onFavoriteTap: () async {
                           try {
                             await playScoutFavoriteTap(

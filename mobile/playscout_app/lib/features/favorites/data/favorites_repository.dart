@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../../home_discover/data/venues_nearby_repository.dart';
-import '../favorite_venue_ids.dart';
 import '../models/favorite_list_item.dart';
 
+/// HTTP client for favorites. Callers must pass **canonical** venue ids where required.
 class FavoritesRepository {
   FavoritesRepository({
     required http.Client httpClient,
@@ -48,12 +48,11 @@ class FavoritesRepository {
     return list.map((e) => FavoriteListItem.fromJson(e as Map<String, dynamic>)).toList();
   }
 
-  Future<AddFavoriteResult> add(String venueId) async {
-    final id = FavoriteVenueIds.canonical(venueId);
+  Future<AddFavoriteResult> add(String canonicalVenueId) async {
     final res = await _http.post(
       _favoritesCollection(),
       headers: const {'Accept': 'application/json', 'Content-Type': 'application/json'},
-      body: jsonEncode({'venueId': id}),
+      body: jsonEncode({'venueId': canonicalVenueId}),
     );
     if (res.statusCode == 401) {
       throw FavoritesUnauthorizedException();
@@ -75,9 +74,10 @@ class FavoritesRepository {
     );
   }
 
-  Future<void> remove(String venueId) async {
-    final id = FavoriteVenueIds.canonical(venueId);
-    final enc = Uri.encodeComponent(id);
+  /// DELETE /favorites/{venueId}. [canonicalVenueId] must already be normalized.
+  /// 204/200: removed. 404: treat as already removed (success, no extra GET).
+  Future<void> remove(String canonicalVenueId) async {
+    final enc = Uri.encodeComponent(canonicalVenueId);
     final res = await _http.delete(
       Uri.parse('$_baseUrl/favorites/$enc'),
       headers: const {'Accept': 'application/json'},
@@ -89,22 +89,6 @@ class FavoritesRepository {
       throw FavoritesForbiddenException();
     }
     if (res.statusCode == 404) {
-      // Routing can return 404 for malformed ids; verify against server list before treating as success.
-      try {
-        final items = await list();
-        final still = items.any((e) => FavoriteVenueIds.canonical(e.venueId) == id);
-        if (still) {
-          throw FavoritesApiException(404, res.body.isEmpty ? 'favorite_delete_not_accepted' : res.body);
-        }
-      } on FavoritesUnauthorizedException {
-        rethrow;
-      } on FavoritesForbiddenException {
-        rethrow;
-      } on FavoritesApiException {
-        rethrow;
-      } catch (_) {
-        throw FavoritesApiException(404, res.body);
-      }
       return;
     }
     if (res.statusCode != 204 && res.statusCode != 200) {

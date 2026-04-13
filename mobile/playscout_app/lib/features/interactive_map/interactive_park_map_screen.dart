@@ -289,6 +289,7 @@ class _MapStage extends StatelessWidget {
                             return InteractiveMapPreviewCard(
                               venue: selected,
                               isFavorite: catalog.isFavorite(selected.id),
+                              favoriteInProgress: catalog.isLoading(selected.id),
                               onFavoriteTap: () async {
                                 try {
                                   await playScoutFavoriteTap(

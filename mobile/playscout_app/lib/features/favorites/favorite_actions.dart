@@ -6,7 +6,7 @@ import '../../app/favorites_scope.dart';
 import '../../app/router.dart';
 import '../auth/models/pending_auth_intent.dart';
 
-/// Guest / anonymous → guest sheet with resume; full member → toggle via [FavoritesCatalog].
+/// Guest / anonymous → guest sheet with resume; full member → [FavoritesStore.toggleFavorite].
 Future<void> playScoutFavoriteTap(
   BuildContext context, {
   required String venueId,
@@ -16,7 +16,11 @@ Future<void> playScoutFavoriteTap(
   final auth = AuthScope.of(context);
   final fav = FavoritesScope.of(context);
   if (auth.hasMemberSession) {
-    await fav.toggleFavorite(venueId: venueId, displayName: venueName, primaryImageUrl: primaryImageUrl);
+    await fav.toggleFavorite(
+      venueId: venueId,
+      displayName: venueName,
+      primaryImageUrl: primaryImageUrl,
+    );
     return;
   }
   if (!context.mounted) return;

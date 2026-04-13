@@ -1,15 +1,15 @@
 import 'package:flutter/widgets.dart';
 
-import '../features/favorites/favorites_catalog.dart';
+import '../features/favorites/favorites_store.dart';
 
-class FavoritesScope extends InheritedNotifier<FavoritesCatalog> {
+class FavoritesScope extends InheritedNotifier<FavoritesStore> {
   const FavoritesScope({
     super.key,
-    required FavoritesCatalog catalog,
+    required FavoritesStore store,
     required super.child,
-  }) : super(notifier: catalog);
+  }) : super(notifier: store);
 
-  static FavoritesCatalog of(BuildContext context) {
+  static FavoritesStore of(BuildContext context) {
     final s = context.dependOnInheritedWidgetOfExactType<FavoritesScope>();
     assert(s != null, 'FavoritesScope missing');
     return s!.notifier!;

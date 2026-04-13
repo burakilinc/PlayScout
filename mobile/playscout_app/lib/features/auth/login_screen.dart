@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
       await session.applyTokens(tokens);
       final d = await session.dispatchPendingIntent(
         router,
-        onFavoriteResume: session.hasMemberSession ? (id) => fav.addFavorite(venueId: id) : null,
+        onFavoriteResume: session.hasMemberSession ? (id) => fav.ensureFavorited(venueId: id) : null,
       );
       if (!mounted) return;
       if (!d.navigated) {
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
       await session.applyTokens(tokens);
       final d = await session.dispatchPendingIntent(
         router,
-        onFavoriteResume: session.hasMemberSession ? (id) => fav.addFavorite(venueId: id) : null,
+        onFavoriteResume: session.hasMemberSession ? (id) => fav.ensureFavorited(venueId: id) : null,
       );
       if (!mounted) return;
       if (!d.navigated) {
@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
       await session.applyTokens(tokens);
       final d = await session.dispatchPendingIntent(
         router,
-        onFavoriteResume: session.hasMemberSession ? (id) => fav.addFavorite(venueId: id) : null,
+        onFavoriteResume: session.hasMemberSession ? (id) => fav.ensureFavorited(venueId: id) : null,
       );
       if (!mounted) return;
       if (!d.navigated) {

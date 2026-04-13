@@ -11,12 +11,14 @@ class SearchResultVenueCard extends StatelessWidget {
     required this.venue,
     required this.onTap,
     required this.isFavorite,
+    this.favoriteInProgress = false,
     required this.onFavoriteTap,
   });
 
   final VenueSummary venue;
   final VoidCallback onTap;
   final bool isFavorite;
+  final bool favoriteInProgress;
   final VoidCallback onFavoriteTap;
 
   @override
@@ -80,15 +82,27 @@ class SearchResultVenueCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: PsSpacing.sm),
-              IconButton(
-                onPressed: onFavoriteTap,
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(minWidth: 36, minHeight: 36),
-                icon: Icon(
-                  isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-                  color: isFavorite ? PsColors.error : PsColors.onSurfaceVariant.withValues(alpha: 0.55),
-                ),
-              ),
+              favoriteInProgress
+                  ? const SizedBox(
+                      width: 36,
+                      height: 36,
+                      child: Center(
+                        child: SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2, color: PsColors.primary),
+                        ),
+                      ),
+                    )
+                  : IconButton(
+                      onPressed: onFavoriteTap,
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(minWidth: 36, minHeight: 36),
+                      icon: Icon(
+                        isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+                        color: isFavorite ? PsColors.error : PsColors.onSurfaceVariant.withValues(alpha: 0.55),
+                      ),
+                    ),
             ],
           ),
         ),

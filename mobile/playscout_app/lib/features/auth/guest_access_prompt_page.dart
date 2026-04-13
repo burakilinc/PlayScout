@@ -72,7 +72,7 @@ class _GuestAccessPromptPageState extends State<GuestAccessPromptPage> with Sing
     router.pop();
     await session.dispatchPendingIntent(
       router,
-      onFavoriteResume: session.hasMemberSession ? (id) => fav.addFavorite(venueId: id) : null,
+      onFavoriteResume: session.hasMemberSession ? (id) => fav.ensureFavorited(venueId: id) : null,
     );
   }
 

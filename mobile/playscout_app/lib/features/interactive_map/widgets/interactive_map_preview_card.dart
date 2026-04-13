@@ -12,12 +12,14 @@ class InteractiveMapPreviewCard extends StatelessWidget {
     required this.venue,
     required this.onTap,
     required this.isFavorite,
+    this.favoriteInProgress = false,
     required this.onFavoriteTap,
   });
 
   final VenueSummary venue;
   final VoidCallback onTap;
   final bool isFavorite;
+  final bool favoriteInProgress;
   final VoidCallback onFavoriteTap;
 
   @override
@@ -99,17 +101,30 @@ class InteractiveMapPreviewCard extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            IconButton(
-                              onPressed: onFavoriteTap,
-                              padding: EdgeInsets.zero,
-                              visualDensity: VisualDensity.compact,
-                              constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
-                              icon: Icon(
-                                isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-                                size: 22,
-                                color: isFavorite ? PsColors.error : PsColors.onSurfaceVariant.withValues(alpha: 0.65),
-                              ),
-                            ),
+                            favoriteInProgress
+                                ? const SizedBox(
+                                    width: 32,
+                                    height: 32,
+                                    child: Center(
+                                      child: SizedBox(
+                                        width: 18,
+                                        height: 18,
+                                        child: CircularProgressIndicator(strokeWidth: 2, color: PsColors.primary),
+                                      ),
+                                    ),
+                                  )
+                                : IconButton(
+                                    onPressed: onFavoriteTap,
+                                    padding: EdgeInsets.zero,
+                                    visualDensity: VisualDensity.compact,
+                                    constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                                    icon: Icon(
+                                      isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+                                      size: 22,
+                                      color:
+                                          isFavorite ? PsColors.error : PsColors.onSurfaceVariant.withValues(alpha: 0.65),
+                                    ),
+                                  ),
                           ],
                         ),
                         const SizedBox(height: PsSpacing.xs),

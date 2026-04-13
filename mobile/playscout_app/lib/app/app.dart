@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../design_system/app_theme.dart';
 import '../features/auth/auth_session.dart';
-import '../features/favorites/favorites_catalog.dart';
+import '../features/favorites/favorites_store.dart';
 import 'app_criteria_controller.dart';
 import 'app_criteria_scope.dart';
 import 'auth_scope.dart';
@@ -21,7 +21,7 @@ class PlayScoutApp extends StatefulWidget {
     super.key,
     required this.router,
     required this.authSession,
-    required this.favoritesCatalog,
+    required this.favoritesStore,
     required this.reviewsWriteRepository,
     required this.suggestionsRepository,
     required this.localeController,
@@ -29,7 +29,7 @@ class PlayScoutApp extends StatefulWidget {
 
   final GoRouter router;
   final AuthSession authSession;
-  final FavoritesCatalog favoritesCatalog;
+  final FavoritesStore favoritesStore;
   final ReviewsWriteRepository reviewsWriteRepository;
   final SuggestionsRepository suggestionsRepository;
   final LocaleController localeController;
@@ -48,7 +48,7 @@ class _PlayScoutAppState extends State<PlayScoutApp> {
       child: AuthScope(
         authSession: widget.authSession,
         child: FavoritesScope(
-          catalog: widget.favoritesCatalog,
+          store: widget.favoritesStore,
           child: LocaleScope(
             controller: widget.localeController,
             child: MemberApiScope(
